@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prioridad de paso · Educación Vial</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="ancho">
+      <h1>Prioridad de paso</h1>
+      <p>Faltas de tránsito por no respetar quién pasa primero, según la Ley Nacional de Tránsito 24.449 y el artículo 2 de la Ordenanza 2379.</p>
+      <nav class="menu">
+        <a href="#regla">La regla</a>
+        <a href="#faltas">Las faltas</a>
+        <a href="#practica">¿Quién pasa?</a>
+        <a href="#contenedor">Imágenes y noticias</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ancho">
+
+    <section id="regla" class="bloque">
+      <h2>La regla base</h2>
+      <p>En una esquina sin semáforo ni carteles, <strong>pasa primero el que viene por tu derecha</strong> (art. 41). Esa prioridad se pierde ante:</p>
+      <ul class="excepciones">
+        <li>una señal que indique otra cosa (PARE, ceda el paso)</li>
+        <li>el tren</li>
+        <li>ambulancias, bomberos y policía en servicio</li>
+        <li>el peatón que cruza por la senda peatonal</li>
+        <li>el que ya circula por una rotonda</li>
+        <li>el que va por la calle asfaltada, si vos salís de una de tierra</li>
+      </ul>
+      <p class="dato">Si hay un choque, la ley presume culpable al que no tenía la prioridad de paso (art. 64).</p>
+    </section>
+
+    <section id="faltas" class="bloque">
+      <h2>Las faltas</h2>
+      <p>Tocá cada falta para ver qué dice la ley.</p>
+      <div class="faltas">
+        <details>
+          <summary>No ceder el paso al que viene por la derecha</summary>
+          <p>Ley 24.449, art. 41: en las esquinas hay que ceder siempre el paso al que cruza desde la derecha.</p>
+        </details>
+        <details>
+          <summary>No ceder el paso al peatón en la senda peatonal</summary>
+          <p>Ley 24.449, art. 41 inc. e: el peatón que cruza por la senda tiene prioridad, y el conductor debe detenerse si lo pone en peligro.</p>
+        </details>
+        <details>
+          <summary>No respetar el PARE o el ceda el paso</summary>
+          <p>Ley 24.449, art. 41 inc. a: la señalización manda por encima de la regla de la derecha.</p>
+        </details>
+        <details>
+          <summary>Cruzar con el semáforo en rojo</summary>
+          <p>Ley 24.449, art. 44: con luz roja hay que detenerse antes de la línea de frenado o de la senda. No respetar el semáforo es falta grave (art. 77 inc. o).</p>
+        </details>
+        <details>
+          <summary>Entrar al cruce sin lugar del otro lado</summary>
+          <p>Ley 24.449, art. 44: aunque esté en verde, no se puede entrar a la esquina si del otro lado no hay espacio para el vehículo.</p>
+        </details>
+        <details>
+          <summary>No ceder el paso a vehículos de emergencia</summary>
+          <p>Ley 24.449, art. 41 inc. c: ambulancias, bomberos y policía en servicio tienen prioridad.</p>
+        </details>
+        <details>
+          <summary>No ceder el paso al tren</summary>
+          <p>Ley 24.449, art. 41 inc. b: los vehículos ferroviarios siempre tienen prioridad.</p>
+        </details>
+        <details>
+          <summary>Entrar a la rotonda sin ceder el paso</summary>
+          <p>Ley 24.449, art. 43: tiene prioridad el que circula por la rotonda sobre el que intenta entrar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="practica" class="bloque">
+      <h2>¿Quién pasa primero?</h2>
+      <p>Leé la situación y elegí. <span id="puntaje">0 de 0</span></p>
+      <div class="situacion">
+        <p class="numero" id="numero"></p>
+        <p class="texto" id="texto"></p>
+        <div class="botones">
+          <button type="button" id="pasoYo">Paso yo</button>
+          <button type="button" id="cedo">Cedo el paso</button>
+        </div>
+        <p class="resultado" id="resultado"></p>
+        <button type="button" class="siguiente" id="siguiente" hidden>Siguiente situación</button>
+      </div>
+    </section>
+
+    <section id="contenedor" class="bloque">
+      <h2>Imágenes y noticias</h2>
+
+      <div class="imagenes">
+        <figure>
+          <svg viewBox="0 0 100 100" role="img" aria-label="Señal de PARE">
+            <polygon points="30,2 70,2 98,30 98,70 70,98 30,98 2,70 2,30" fill="#c8102e"/>
+            <text x="50" y="59" text-anchor="middle" font-family="Arial" font-weight="700" font-size="26" fill="#fff">PARE</text>
+          </svg>
+          <figcaption>PARE: detenerse siempre y ceder el paso.</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 100 100" role="img" aria-label="Señal de ceda el paso">
+            <path d="M5 8 H95 L50 94 Z" fill="#fff" stroke="#c8102e" stroke-width="9" stroke-linejoin="round"/>
+            <text x="50" y="30" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11">CEDA EL</text>
+            <text x="50" y="43" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11">PASO</text>
+          </svg>
+          <figcaption>Ceda el paso: frenar solo si viene alguien.</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 100 100" role="img" aria-label="Esquina: el auto rojo viene por la derecha y tiene prioridad">
+            <rect width="100" height="100" fill="#d9dcd5"/>
+            <rect x="38" width="24" height="100" fill="#444"/>
+            <rect y="38" width="100" height="24" fill="#444"/>
+            <path d="M50 0 V36 M50 64 V100 M0 50 H36 M64 50 H100" stroke="#e7c84c" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <rect x="52" y="72" width="8" height="15" rx="2" fill="#1d4c9c"/>
+            <rect x="72" y="41" width="15" height="8" rx="2" fill="#c8102e"/>
+            <path d="M56 69 V63 M53 66 L56 63 L59 66" stroke="#fff" stroke-width="1.5" fill="none"/>
+            <path d="M69 45 H63 M66 42 L63 45 L66 48" stroke="#fff" stroke-width="1.5" fill="none"/>
+          </svg>
+          <figcaption>El auto rojo viene por la derecha del azul: pasa primero.</figcaption>
+        </figure>
+      </div>
+
+      <div class="noticias">
+        <article>
+          <p class="medio">Diario Río Negro · 10/08/2026</p>
+          <h3>Neuquén registra más de 9.700 multas al mes captadas por las cámaras en las esquinas</h3>
+          <p>La falta más común es invadir la senda peatonal: el 61% de los casos. También detectan cruces en rojo.</p>
+          <a href="https://www.rionegro.com.ar/municipales/neuquen-registra-mas-de-9-700-multas-al-mes-captadas-por-las-camaras-en-las-esquinas/" target="_blank" rel="noopener">Leer la nota</a>
+        </article>
+        <article>
+          <p class="medio">Mejor Informado · 12/08/2026</p>
+          <h3>Cámaras de Neuquén: 40% menos de accidentes y multas en descenso</h3>
+          <p>En las esquinas con cámaras los choques bajaron un 40%. Invadir la senda sigue siendo la falta que más se repite.</p>
+          <a href="https://www.mejorinformado.com/regionales/neuquen-bajaron-fuerte-infracciones-fotomultas-hay-falta-sigue-siendo-protagonista_1786537683" target="_blank" rel="noopener">Leer la nota</a>
+        </article>
+        <article>
+          <p class="medio">Cutral Co al Instante · 05/08/2026</p>
+          <h3>Hubo un choque entre dos camionetas en una esquina de Cutral Co</h3>
+          <p>Chocaron en Santa Isabel y Pernisek. No hubo heridos, solo daños. Un ejemplo de por qué importa saber quién pasa primero.</p>
+          <a href="https://www.cutralcoalinstante.com/2026/08/05/hubo-un-choque-entre-dos-camionetas-en-una-esquina-de-cutral-co/" target="_blank" rel="noopener">Leer la nota</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="ancho">
+      <p>Fuentes: <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm" target="_blank" rel="noopener">Ley Nacional de Tránsito 24.449</a> · Ordenanza 2379, art. 2</p>
+      <p>Colegio Tecnológico UTN-FRN · Comisión Ada Lovelace · Int. al Diseño Web · Prof. Seguel Graciela Andrea</p>
+    </div>
+  </footer>
+
+  <script src="guion.js"></script>
+</body>
+</html>
